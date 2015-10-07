@@ -72,6 +72,9 @@
                     obj.setCurPage(reData.data.curPage + 1);
                 }
             };
+            obj.error_fn = function (reData) {
+                console.log('error_fn',reData);
+            };
             //obj.setCurPage(9);
             console.log(obj.curPage);
         })
