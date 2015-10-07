@@ -16,7 +16,7 @@ var third_party = window.jQuery ||  window.Zepto;
         var defaultOpt = {
             el:$('#j_ajaxList'),//list的$dom元素
             moreBtn:$('#j_moreBtn'),//按钮
-            url:'',//ajax 必填
+            url:'',//ajax 必填,没有对跨域处理
             isAuto:true,//是否下拉自动刷新,false为点击按钮加载
             startPage:2, //开始加载是第几页
             pData:{}, //发送请求时所需参数
