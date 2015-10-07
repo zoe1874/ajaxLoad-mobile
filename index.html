@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>移动端上滑加载ajaxLoad</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="http://assets.dxycdn.com/app/biomart/mobile/src/css/common/comm.min.css?t=931223590" />
+    <link rel="stylesheet" type="text/css" href="http://assets.dxycdn.com/app/biomart/mobile/source/css/page/trycenter.css?t=931223590" />
+    <script src="http://assets.dxycdn.com/third-party/zepto.min.js" type="text/javascript"></script>
+    <script src="ajaxLoad.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="list" id="j_ajaxList">
+    <a href="#" class="item">
+        <div class="g-img-wp">
+            <img src="http://assets.dxycdn.com/app/biomart/mobile/imgs/default.jpg">
+        </div>
+        <aside class="txt">
+            <h3>欢迎注册丁香通欢迎注册丁香通丁丁丁 欢迎注册丁香通</h3>
+            <span>22人申请</span>
+            <button class="btn">免费申请<i class="ui-ico ui-ico-go"></i></button>
+        </aside>
+    </a>
+    <a href="#" class="item">
+        <div class="g-img-wp">
+            <img src="http://assets.dxycdn.com/app/biomart/mobile/imgs/default.jpg">
+        </div>
+        <aside class="txt">
+            <h3>欢迎注册丁香通欢迎注册丁香通丁丁丁 欢迎注册丁香通</h3>
+            <span>22人申请</span>
+            <button class="btn">免费申请<i class="ui-ico ui-ico-go"></i></button>
+        </aside>
+    </a>
+    <a href="#" class="item">
+        <div class="g-img-wp">
+            <img src="http://assets.dxycdn.com/app/biomart/imgs/ads/img130-130.jpg">
+        </div>
+        <aside class="txt">
+            <h3>欢迎注册丁香通欢迎注册丁香通丁丁丁 欢迎注册丁香通</h3>
+            <span>22人申请</span>
+            <button class="btn">免费申请<i class="ui-ico ui-ico-go"></i></button>
+        </aside>
+    </a>
+    <a href="#" class="item">
+        <div class="g-img-wp">
+            <img src="http://assets.dxycdn.com/app/biomart/imgs/ads/img130-130.jpg">
+        </div>
+        <aside class="txt">
+            <h3>欢迎注册丁香通欢迎注册丁香通丁丁丁 欢迎注册丁香通</h3>
+            <span>22人申请</span>
+            <button class="btn">免费申请<i class="ui-ico ui-ico-go"></i></button>
+        </aside>
+    </a>
+</div>
+<div class="g-auto-more" id="j_moreBtn">上滑加载更多</div>
+
+
+
+<script>
+    (function($){
+        $(function () {
+            var obj = new global.ajaxLoad({
+                url:'',
+                pData:{limit:5},
+                page:'pge'
+            });
+
+            obj.success_fn = function (reData) {
+                console.log(reData);
+                if(reData.data.items.length){
+                    obj.setCurPage(reData.data.curPage + 1);
+                }
+            };
+            //obj.setCurPage(9);
+            console.log(obj.curPage);
+        })
+    })(Zepto);
+
+</script>
+</body>
+</html>
