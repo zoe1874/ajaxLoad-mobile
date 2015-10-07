@@ -1,5 +1,5 @@
 # ajaxLoad-mobile
-base on jQuery or Zepto
+depend on jQuery or Zepto
 
 pData:ajax请求时需要额外的参数,json结构
 page:翻页时的页码参数,如page,pge
