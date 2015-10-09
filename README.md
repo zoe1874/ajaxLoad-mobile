@@ -4,20 +4,20 @@
 依赖jquery,百度的fex-webUploader,jweixin-1.0.0.js
 需要引入uploader.css
 
-# 说明
+## 说明
 包括两部分内容:
 1. 不包含UI部分,只是整合了两种上传方式,引入upload.base.min.js
 2. 包含UI部分,UI交互同demo(参照医师认证),引入upload.ui.min.js
 
-# 引入:
+## 引入:
 都需要单独引入依赖,jquery,webuploader,jweixin
 支持全局引入和AMD引入,参照demo/index.html
 
-# 使用
+## 使用
 upload.base.min.js和upload.ui.min.js分别对应两个全局变量uploadBase和uploadUI
 使用方法为配置参数,新建一个实例，然后调用实例方法,参照demo/index.html
 
-## 部分参数说明:
+### 部分参数说明:
 
 主要分两部分参数:
 1. webuploadConfig:fex-webUploader的参数配置,
